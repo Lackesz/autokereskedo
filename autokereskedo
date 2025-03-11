@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Car {
+    string licensePlate;
+    string brand;
+    string model;
+    int yearOfManufacture;
+};
+
+int main() {
+    Car cars[10];
+    int numberOfCars = 3;
+    string inputLicensePlate;
+    bool found = false;
+
+    cars[0] = {"XYZ-123", "Opel", "Astra", 2005};
+    cars[1] = {"BRU-420", "Mazda", "CX 5", 2012};
+    cars[2] = {"NAH-BRO", "Tesla", "Model S", 2022};
+
+    cout << "Please enter the license plate number: " << endl;
+    cin >> inputLicensePlate;
+
+    for (int i = 0; i < numberOfCars; i++) {
+        if (cars[i].licensePlate == inputLicensePlate) {
+            cout << "Brand: " << cars[i].brand
+                 << "; Model: " << cars[i].model
+                 << "; License Plate: " << cars[i].licensePlate
+                 << "; Year of Manufacture: " << cars[i].yearOfManufacture
+                 << endl;
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found) {
+        cout << "No car found with the given license plate number." << endl;
+    }
+    
+    return 0;
+}
