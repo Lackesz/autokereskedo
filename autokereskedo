@@ -16,9 +16,9 @@ int main() {
     string inputLicensePlate;
     bool found = false;
 
-    cars[0] = {"XYZ-123", "Opel", "Astra", 2005};
-    cars[1] = {"BRU-420", "Mazda", "CX 5", 2012};
-    cars[2] = {"NAH-BRO", "Tesla", "Model S", 2022};
+    cars[0] = {"ASD-690", "BMW", "X1", 2013};
+    cars[1] = {"LIL-364", "Volkswagen", "Passat", 2012};
+    cars[2] = {"LOL-741", "Dacia", "Logan", 2006};
 
     cout << "Please enter the license plate number: " << endl;
     cin >> inputLicensePlate;
